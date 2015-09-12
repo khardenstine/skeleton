@@ -15,14 +15,14 @@ class SlowTest extends FlatSpec with Matchers {
 
     Thread.sleep(2000) //Simulate a slow test
 
-    stack.pop() should be (2)
-    stack.pop() should be (1)
+    stack.pop() should be(2)
+    stack.pop() should be(1)
   }
 
   it should "throw NoSuchElementException if an empty stack is popped" in {
     val emptyStack = new Stack[Int]
-    a [NoSuchElementException] should be thrownBy {
+    a[NoSuchElementException] should be thrownBy {
       emptyStack.pop()
-    } 
+    }
   }
 }
