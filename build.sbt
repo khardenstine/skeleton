@@ -22,7 +22,4 @@ scalacOptions ++= List("-feature", "-deprecation", "-unchecked", "-Xlint")
 // Ignore tests tagged as @Slow (they should be picked only by integration test)
 testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-l", "org.scalatest.tags.Slow", "-u", "target/junit-xml-reports", "-oD", "-eS")
 
-//Style Check section
-scalastyleConfig <<= baseDirectory { _ / "src/main/config" / "scalastyle-config.xml" }
-
 coverageEnabled := true
